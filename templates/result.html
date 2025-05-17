@@ -1,0 +1,171 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Tumor Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .predicted-class {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4e73df;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-box {
+            margin: 10px;
+        }
+        .image-box img {
+            max-width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .image-title {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .btn-home {
+            margin-top: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prediction Result</h1>
+    
+    <div class="predicted-class">
+        Predicted Tumor Type: {{ prediction }}
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img src="/{{ original_image }}" alt="Original MRI">
+            <div class="image-title">Original MRI Image</div>
+        </div>
+        <div class="image-box">
+            <img src="/{{ heatmap_image }}" alt="Grad-CAM Heatmap">
+            <div class="image-title">Grad-CAM Heatmap</div>
+        </div>
+    </div>
+
+    <a href="/" class="btn btn-primary btn-home">Go Back Home</a>
+</div>
+
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Tumor Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .predicted-class {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4e73df;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-box {
+            margin: 10px;
+        }
+        .image-box img {
+            max-width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .image-title {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .btn-home {
+            margin-top: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        .disease-info {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prediction Result</h1>
+    
+    <div class="predicted-class">
+        Predicted Tumor Type: {{ prediction }}
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img src="/{{ original_image }}" alt="Original MRI">
+            <div class="image-title">Original MRI Image</div>
+        </div>
+        <div class="image-box">
+            <img src="/{{ heatmap_image }}" alt="Grad-CAM Heatmap">
+            <div class="image-title">Grad-CAM Heatmap</div>
+        </div>
+    </div>
+
+    <div class="disease-info" style="margin-top: 30px;">
+        <h3>Precautionary Measures & Cure for {{ prediction }}</h3>
+        <p>{{ disease_info }}</p>
+    </div>
+
+    <a href="/" class="btn btn-primary btn-home">Go Back Home</a>
+</div>
+
+</body>
+</html>
